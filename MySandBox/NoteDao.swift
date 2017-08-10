@@ -14,7 +14,7 @@ class NoteDAO {
     static let sharedInstance: NoteDAO = {
         
         let instance = NoteDAO()
-        instance.Helper = SandBox.shareInstance()!
+        instance.Helper = SandBox.sharedInstance
         return instance
     }()
     

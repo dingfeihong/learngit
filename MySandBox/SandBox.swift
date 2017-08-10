@@ -8,29 +8,40 @@
 
 import Foundation
 public class SandBox{
-    private var plistFilePath:String?//路径
-    private var dateFormatter = DateFormatter()//私有的DateFormatter属性
-    let DEFAULT_NAME = "NoteList.plist"
     
-    //单例模式
-    open static func shareInstance() -> SandBox?{
-        //初始化单例
+    
+    
+    
+    //私有的DateFormatter属性
+    private var dateFormatter = DateFormatter()
+    //私有的沙箱目录中属性列表文件路径
+    private var plistFilePath: String!
+    
+    public static let sharedInstance: SandBox = {
         let instance = SandBox()
-        instance.plistFilePath = instance.applicationDocumentsDirectoryFile()
         
+        //初始化沙箱目录中属性列表文件路径
+        instance.plistFilePath = instance.applicationDocumentsDirectoryFile()
         //初始化DateFormatter
         instance.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-
+        //初始化属性列表文件
         instance.initSandBox()
+        
         return instance
-    }
+    }()
+    
+    
+    
+    
+    
+    
     func initSandBox(){
         let fileManager = FileManager.default
         let exits = fileManager.fileExists(atPath: self.plistFilePath!)
         if (!exits){
             let bundle = Bundle(for: SandBox.self)
             let bundlePath = bundle.resourcePath as NSString?
-            let defaultPath = bundlePath!.strings(byAppendingPaths: [DEFAULT_NAME])
+            let defaultPath = bundlePath!.strings(byAppendingPaths: ["NotesList.plist"])
             do{
                 try fileManager.copyItem(atPath: defaultPath[0], toPath: self.plistFilePath!)
             }catch{
@@ -42,7 +53,7 @@ public class SandBox{
     
     func applicationDocumentsDirectoryFile() -> String {
         let documentDirectory: NSArray = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as NSArray
-        let path = (documentDirectory[0] as AnyObject).appendingPathComponent(DEFAULT_NAME) as String
+        let path = (documentDirectory[0] as AnyObject).appendingPathComponent("NotesList.plist") as String
         return path
     }
     

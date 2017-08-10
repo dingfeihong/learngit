@@ -30,6 +30,8 @@ class ViewController: UITableViewController{
         let date = Date()
         let new = Note(date: date, content: "\(n)")
         note.insert(model: new)
+        
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
