@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		352ED4621F3D87DC00DFF007 /* ADDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352ED4611F3D87DC00DFF007 /* ADDViewController.swift */; };
+		352ED4641F3D98C800DFF007 /* NoteBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352ED4631F3D98C800DFF007 /* NoteBL.swift */; };
+		352ED4671F3D999800DFF007 /* NoteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352ED4661F3D999800DFF007 /* NoteDAO.swift */; };
 		35AF3E841F3C51FF007F683D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AF3E831F3C51FF007F683D /* AppDelegate.swift */; };
 		35AF3E861F3C51FF007F683D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AF3E851F3C51FF007F683D /* ViewController.swift */; };
 		35AF3E891F3C51FF007F683D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35AF3E871F3C51FF007F683D /* Main.storyboard */; };
 		35AF3E8B1F3C51FF007F683D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35AF3E8A1F3C51FF007F683D /* Assets.xcassets */; };
 		35AF3E8E1F3C51FF007F683D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35AF3E8C1F3C51FF007F683D /* LaunchScreen.storyboard */; };
-		35AF3EA81F3C7DEC007F683D /* SandBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AF3EA71F3C7DEC007F683D /* SandBox.swift */; };
-		35AF3EAA1F3C7DFA007F683D /* NoteDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AF3EA91F3C7DFA007F683D /* NoteDao.swift */; };
 		35AF3EAC1F3C7E09007F683D /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AF3EAB1F3C7E09007F683D /* Note.swift */; };
 		35E20A3D1F3C89EF00FED6D6 /* NotesList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35E20A3C1F3C89EF00FED6D6 /* NotesList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		352ED4611F3D87DC00DFF007 /* ADDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADDViewController.swift; sourceTree = "<group>"; };
+		352ED4631F3D98C800DFF007 /* NoteBL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteBL.swift; sourceTree = "<group>"; };
+		352ED4661F3D999800DFF007 /* NoteDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDAO.swift; sourceTree = "<group>"; };
 		35AF3E801F3C51FF007F683D /* MySandBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySandBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35AF3E831F3C51FF007F683D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35AF3E851F3C51FF007F683D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,8 +30,6 @@
 		35AF3E8A1F3C51FF007F683D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35AF3E8D1F3C51FF007F683D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35AF3E8F1F3C51FF007F683D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35AF3EA71F3C7DEC007F683D /* SandBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SandBox.swift; sourceTree = "<group>"; };
-		35AF3EA91F3C7DFA007F683D /* NoteDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDao.swift; sourceTree = "<group>"; };
 		35AF3EAB1F3C7E09007F683D /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		35E20A3C1F3C89EF00FED6D6 /* NotesList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = NotesList.plist; path = MySandBox/NotesList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,11 +45,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		352ED4651F3D994D00DFF007 /* BusinesslogicLayer */ = {
+			isa = PBXGroup;
+			children = (
+				352ED4631F3D98C800DFF007 /* NoteBL.swift */,
+			);
+			name = BusinesslogicLayer;
+			sourceTree = "<group>";
+		};
 		35AF3E771F3C51FF007F683D = {
 			isa = PBXGroup;
 			children = (
-				35AF3EA71F3C7DEC007F683D /* SandBox.swift */,
 				35AF3EAD1F3C7E11007F683D /* PersistenceLayer */,
+				352ED4651F3D994D00DFF007 /* BusinesslogicLayer */,
 				35AF3E821F3C51FF007F683D /* MySandBox */,
 				35AF3E811F3C51FF007F683D /* Products */,
 			);
@@ -67,6 +77,7 @@
 				35AF3E831F3C51FF007F683D /* AppDelegate.swift */,
 				35AF3E851F3C51FF007F683D /* ViewController.swift */,
 				35AF3E871F3C51FF007F683D /* Main.storyboard */,
+				352ED4611F3D87DC00DFF007 /* ADDViewController.swift */,
 				35AF3E8A1F3C51FF007F683D /* Assets.xcassets */,
 				35AF3E8C1F3C51FF007F683D /* LaunchScreen.storyboard */,
 				35AF3E8F1F3C51FF007F683D /* Info.plist */,
@@ -78,8 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				35E20A3C1F3C89EF00FED6D6 /* NotesList.plist */,
-				35AF3EA91F3C7DFA007F683D /* NoteDao.swift */,
 				35AF3EAB1F3C7E09007F683D /* Note.swift */,
+				352ED4661F3D999800DFF007 /* NoteDAO.swift */,
 			);
 			name = PersistenceLayer;
 			sourceTree = "<group>";
@@ -157,10 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				352ED4621F3D87DC00DFF007 /* ADDViewController.swift in Sources */,
 				35AF3E861F3C51FF007F683D /* ViewController.swift in Sources */,
 				35AF3E841F3C51FF007F683D /* AppDelegate.swift in Sources */,
-				35AF3EA81F3C7DEC007F683D /* SandBox.swift in Sources */,
-				35AF3EAA1F3C7DFA007F683D /* NoteDao.swift in Sources */,
+				352ED4671F3D999800DFF007 /* NoteDAO.swift in Sources */,
+				352ED4641F3D98C800DFF007 /* NoteBL.swift in Sources */,
 				35AF3EAC1F3C7E09007F683D /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
