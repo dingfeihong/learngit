@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UITableViewController{
     
     var noteBL: NoteBL!
-    private var n = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         noteBL = NoteBL.sharedInstance
