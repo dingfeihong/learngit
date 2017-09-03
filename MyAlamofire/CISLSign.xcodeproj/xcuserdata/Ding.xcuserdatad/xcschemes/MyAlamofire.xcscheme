@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "353B54161F5944B000097C58"
-               BuildableName = "MyAlamofire.app"
-               BlueprintName = "MyAlamofire"
-               ReferencedContainer = "container:MyAlamofire.xcodeproj">
+               BuildableName = "CISLSign.app"
+               BlueprintName = "CISLSign"
+               ReferencedContainer = "container:CISLSign.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "353B54161F5944B000097C58"
-            BuildableName = "MyAlamofire.app"
-            BlueprintName = "MyAlamofire"
-            ReferencedContainer = "container:MyAlamofire.xcodeproj">
+            BuildableName = "CISLSign.app"
+            BlueprintName = "CISLSign"
+            ReferencedContainer = "container:CISLSign.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "353B54161F5944B000097C58"
-            BuildableName = "MyAlamofire.app"
-            BlueprintName = "MyAlamofire"
-            ReferencedContainer = "container:MyAlamofire.xcodeproj">
+            BuildableName = "CISLSign.app"
+            BlueprintName = "CISLSign"
+            ReferencedContainer = "container:CISLSign.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "353B54161F5944B000097C58"
-            BuildableName = "MyAlamofire.app"
-            BlueprintName = "MyAlamofire"
-            ReferencedContainer = "container:MyAlamofire.xcodeproj">
+            BuildableName = "CISLSign.app"
+            BlueprintName = "CISLSign"
+            ReferencedContainer = "container:CISLSign.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

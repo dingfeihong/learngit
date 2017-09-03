@@ -94,7 +94,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		353B54171F5944B000097C58 /* MyAlamofire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAlamofire.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		353B54171F5944B000097C58 /* CISLSign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CISLSign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		353B541A1F5944B000097C58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		353B541C1F5944B000097C58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		353B541F1F5944B000097C58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 			children = (
 				35CE047B1F5965C900CBBCAF /* PersistenceLayer */,
 				35CE04851F596CEF00CBBCAF /* DataModel */,
-				353B54191F5944B000097C58 /* MyAlamofire */,
+				353B54191F5944B000097C58 /* CISLSIgn */,
 				353B54181F5944B000097C58 /* Products */,
 				353B542D1F59461200097C58 /* Alamofire.xcodeproj */,
 			);
@@ -134,12 +134,12 @@
 		353B54181F5944B000097C58 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				353B54171F5944B000097C58 /* MyAlamofire.app */,
+				353B54171F5944B000097C58 /* CISLSign.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		353B54191F5944B000097C58 /* MyAlamofire */ = {
+		353B54191F5944B000097C58 /* CISLSIgn */ = {
 			isa = PBXGroup;
 			children = (
 				353B541A1F5944B000097C58 /* AppDelegate.swift */,
@@ -150,6 +150,7 @@
 				353B54231F5944B000097C58 /* LaunchScreen.storyboard */,
 				353B54261F5944B000097C58 /* Info.plist */,
 			);
+			name = CISLSIgn;
 			path = MyAlamofire;
 			sourceTree = "<group>";
 		};
@@ -187,9 +188,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		353B54161F5944B000097C58 /* MyAlamofire */ = {
+		353B54161F5944B000097C58 /* CISLSign */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 353B54291F5944B000097C58 /* Build configuration list for PBXNativeTarget "MyAlamofire" */;
+			buildConfigurationList = 353B54291F5944B000097C58 /* Build configuration list for PBXNativeTarget "CISLSign" */;
 			buildPhases = (
 				353B54131F5944B000097C58 /* Sources */,
 				353B54141F5944B000097C58 /* Frameworks */,
@@ -201,9 +202,9 @@
 			dependencies = (
 				353B54491F59462300097C58 /* PBXTargetDependency */,
 			);
-			name = MyAlamofire;
+			name = CISLSign;
 			productName = MyAlamofire;
-			productReference = 353B54171F5944B000097C58 /* MyAlamofire.app */;
+			productReference = 353B54171F5944B000097C58 /* CISLSign.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -218,11 +219,12 @@
 				TargetAttributes = {
 					353B54161F5944B000097C58 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = X2R5FF58DD;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 353B54121F5944B000097C58 /* Build configuration list for PBXProject "MyAlamofire" */;
+			buildConfigurationList = 353B54121F5944B000097C58 /* Build configuration list for PBXProject "CISLSign" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -241,7 +243,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				353B54161F5944B000097C58 /* MyAlamofire */,
+				353B54161F5944B000097C58 /* CISLSign */,
 			);
 		};
 /* End PBXProject section */
@@ -453,6 +455,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X2R5FF58DD;
 				INFOPLIST_FILE = MyAlamofire/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ding.MyAlamofire;
@@ -466,6 +469,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X2R5FF58DD;
 				INFOPLIST_FILE = MyAlamofire/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ding.MyAlamofire;
@@ -477,7 +481,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		353B54121F5944B000097C58 /* Build configuration list for PBXProject "MyAlamofire" */ = {
+		353B54121F5944B000097C58 /* Build configuration list for PBXProject "CISLSign" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				353B54271F5944B000097C58 /* Debug */,
@@ -486,7 +490,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		353B54291F5944B000097C58 /* Build configuration list for PBXNativeTarget "MyAlamofire" */ = {
+		353B54291F5944B000097C58 /* Build configuration list for PBXNativeTarget "CISLSign" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				353B542A1F5944B000097C58 /* Debug */,

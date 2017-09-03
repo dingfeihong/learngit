@@ -11,6 +11,7 @@ import Alamofire
 class SignInController: UIViewController {
 
  
+    @IBOutlet weak var threadButton: UIButton!
     @IBOutlet weak var signRes: UILabel!
     @IBOutlet weak var signButton: UIButton!
     @IBOutlet weak var userStatus: UILabel!
@@ -32,6 +33,11 @@ class SignInController: UIViewController {
             signButton.addTarget(self, action: #selector(SignIn), for: UIControlEvents.touchUpInside)
         }
         // Do any additional setup after loading the view.
+        
+    }
+    
+    @IBAction func Back(_ sender: Any) {
+        self.presentingViewController!.dismiss(animated: true, completion: nil)
     }
     func SignIn(){
         let id = m_model?.GetID()
@@ -45,7 +51,8 @@ class SignInController: UIViewController {
             self.m_model?.SetTime(time: date)
             
             self.signRes.text = "签入成功"
-            self.userStatus.text = "已签入:\(self.m_model?.GetTime())"
+            let time = self.m_model?.GetTime()
+            self.userStatus.text = "已签入:\(time!)"
             
             self.m_model?.SetStatus(status: true)
             print("JSON: \(JSON)")
@@ -80,11 +87,15 @@ class SignInController: UIViewController {
         }
 
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func StartThread(_ sender: Any) {
+        
+    }
 
 
 
