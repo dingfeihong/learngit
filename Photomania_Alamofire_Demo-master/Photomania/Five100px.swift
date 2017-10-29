@@ -11,8 +11,7 @@ import Alamofire
 struct Five100px {
     enum Router: URLRequestConvertible {
         static let baseURLString = "https://api.500px.com/v1"
-        static let consumerKey = "消费者密钥"
-        
+        static let consumerKey = "aOKBdsKuJ99kxsa0q7Qhzqi69U0BQGkW4YPLMwTi   "        
         case popularPhotos(Int)
         case photoInfo(Int, ImageSize)
         case comments(Int, Int)

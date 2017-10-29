@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-
+import Foundation
 class ViewController: UIViewController {
     
     @IBOutlet weak var userName: UITextField!
@@ -22,37 +22,32 @@ class ViewController: UIViewController {
         //NotificationCenter.default.addObserver(self, selector: "signIn", name: <#T##NSNotification.Name?#>, object: <#T##Any?#>)
     }
 
+    @IBAction func Quit(_ sender: Any) {
+        exit(0)
+    }
     @IBAction func LogIn(_ sender: Any) {
-        let url = "http://10.131.200.20/CISWORK/php/getStatusForWin.php"
-        let params =  ["username": userName.text!, "password":passWord.text!, "type": "JSON", "action": "query"]
+        let url = "http://cscw.fudan.edu.cn/CISWORK/WebService.asmx/IsValiad"
+        let params =  ["uname": userName.text!, "pwd":passWord.text!]
+      //  let params =  [ "type": "JSON", "action": "query"]
         
-        Alamofire.request(url, method: .get, parameters: params).responseJSON {
+        Alamofire.request(url, method: .get,parameters: params).responseString {
             response in
-            guard let JSON = response.result.value else { return }
+            guard let logStr = response.result.value else { return }
+            //判断在字符串a中是否包含"Hello"字符串
             
+            if(logStr.contains("true")){
+                print("Login successful")
+                self.performSegue(withIdentifier:"login", sender: self)
+            }
             
-            let res = JSON as! NSDictionary
-            let id = res.value(forKey: "userid") as! String
-            let time = res.value(forKey: "signtime") as! String
-            let sign = (res.value(forKey: "signflag") as! String) == "1" ? true:false
-            
-            self.model.load(name: self.userName.text!, pswd: self.passWord.text!, id: id, status: sign, time: time)
-            print("JSON: \(JSON)")
-            
-         /*
-            var thirdVC = self.storyboard?.instantiateViewController(withIdentifier: "login") as! SignInController
-            thirdVC.model = self.model
-            self.navigationController?.pushViewController(thirdVC, animated: true)
-            */
-            self.performSegue(withIdentifier:"login", sender: self)
-
+            //self.model.load(name: self.userName.text!, pswd: self.passWord.text!, id: id, status: sign, time: time)
         }
 
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "login"{
             let controller = segue.destination as! SignInController
-            controller.m_model = self.model
+            //controller.m_model = self.model
         }
     }
     override func didReceiveMemoryWarning() {
