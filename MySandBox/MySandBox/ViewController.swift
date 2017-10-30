@@ -37,8 +37,10 @@ class ViewController: UITableViewController{
         // 给cell赋值
         if noteBL.getNum() > 0 {
             let dict = noteBL.getCell(num: indexPath.row)
-            cell.textLabel?.text = (dict["date"] as! String)
-            cell.detailTextLabel?.text = (dict["content"] as! String)
+            cell.textLabel?.text = "(dictas! String)"
+            cell.detailTextLabel?.text = "(dictas! String)"
+           // cell.textLabel?.text = (dict["date"] as! String)
+            //cell.detailTextLabel?.text = (dict["content"] as! String)
         }
         return cell
     }

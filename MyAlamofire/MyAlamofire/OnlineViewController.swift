@@ -9,36 +9,54 @@
 import UIKit
 import Alamofire
 class OnlineViewController: UITableViewController{
+    var listData:NSArray!
     
-    var dictData = [Any]()
-    //var note: NoteDAO!
     override func viewDidLoad() {
         super.viewDidLoad()
-       // note = NoteDAO.sharedInstance
-        
-        //   note.insert(date: nil, context: nil)
-        //dictData = note.showAll()!
-        tableView.reloadData()
+        Queryonline()
     }
+    
+    func Queryonline() {
+        let url = "http://cscw.fudan.edu.cn/CISWORK/WebService.asmx/GetSearch"
+        Alamofire.request(url, method: .get).responsePropertyList {
+            response in
+            guard let onlineStr = response.result.value else { return }
+            
+            let res = onlineStr as! String
+            let data = res.data(using: String.Encoding.utf8)
+            
+            let jsonArr = try! JSONSerialization.jsonObject(with: data!,options: JSONSerialization.ReadingOptions.mutableContainers) as! [[String: Any]]
+            print("记录数：\(jsonArr.count)")
+            for json in jsonArr {
+                let dict = NSDictionary(objects: [json["userId"]!,json["zh_name"]!,json["signTimestamp"]!], forKeys: ["ID" as NSCopying,"Name" as NSCopying,"Date" as NSCopying])
+                self.listData.adding(dict)
+            }
+            
+            self.tableView.reloadData()
+        }
+    }
+    @IBAction func Back(_ sender: Any) {
+        self.presentingViewController!.dismiss(animated: true, completion: nil)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dictData.count/2
+        return self.listData.count
     }
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        // 给cell赋值
-        if self.dictData.count > 0 {
-            cell.textLabel?.text = (dictData[indexPath.row*2] as! String)
-            cell.detailTextLabel?.text = (dictData[indexPath.row*2+1] as! String)
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath)
+        let row = indexPath.row
+        if self.listData.count > 0 {
+            let rowDict = self.listData[row] as! NSDictionary
+            cell.textLabel?.text = rowDict["zh_name"] as? String
+            
+            cell.detailTextLabel?.text = rowDict["signTimestamp"] as! String
         }
         return cell
     }
