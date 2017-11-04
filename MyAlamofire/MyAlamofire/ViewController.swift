@@ -44,7 +44,6 @@ class ViewController: UIViewController {
                 self.performSegue(withIdentifier:"login", sender: self)
             }
             
-            //self.model.load(name: self.userName.text!, pswd: self.passWord.text!, id: id, status: sign, time: time)
         }
 
     }

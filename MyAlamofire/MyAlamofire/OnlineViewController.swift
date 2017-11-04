@@ -12,15 +12,23 @@ class OnlineViewController: UIViewController,UITableViewDataSource,UITableViewDe
     var listData =  NSMutableArray()//在线人数数据
     @IBOutlet var tableView: UITableView!
     
+    //下拉刷新控制器
+    var refreshControl = UIRefreshControl()
+    
     let dateFormatter = DateFormatter()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         dateFormatter.dateFormat = "yyyy年MM月dd日"
+        
+        //添加刷新
+        refreshControl.addTarget(self, action: #selector(Queryonline),for:.valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "下拉刷新数据")
+        tableView.addSubview(refreshControl)
+        
         //查询在线人数
         Queryonline()
         
-        tableView.reloadData()
     }
     
     func Queryonline() {
@@ -38,11 +46,15 @@ class OnlineViewController: UIViewController,UITableViewDataSource,UITableViewDe
             print("记录数：\(jsonArr.count)")
             
             //遍历加入listData
+            
+            self.listData =  NSMutableArray()//在线人数数据
+            
             for json in jsonArr {
                 let dict = NSDictionary(objects: [json["zhName"]!,json["recordTime"]!], forKeys: ["Name" as NSCopying,"Date" as NSCopying])
                 self.listData.add(dict)
             }
             self.tableView.reloadData()
+         self.refreshControl.endRefreshing()
         }
     }
     @IBAction func Back(_ sender: Any) {

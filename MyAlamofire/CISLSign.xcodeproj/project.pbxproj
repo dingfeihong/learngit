@@ -13,6 +13,8 @@
 		35229ADB1FA715EB00FF1866 /* show.png in Resources */ = {isa = PBXBuildFile; fileRef = 35229AD61FA715EA00FF1866 /* show.png */; };
 		35229ADC1FA715EB00FF1866 /* timg.png in Resources */ = {isa = PBXBuildFile; fileRef = 35229AD71FA715EB00FF1866 /* timg.png */; };
 		35229ADD1FA715EB00FF1866 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = 35229AD81FA715EB00FF1866 /* line.png */; };
+		35229ADF1FA722A600FF1866 /* monitor.png in Resources */ = {isa = PBXBuildFile; fileRef = 35229ADE1FA722A500FF1866 /* monitor.png */; };
+		35229AE11FA722B000FF1866 /* text-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 35229AE01FA722B000FF1866 /* text-left.png */; };
 		353B541B1F5944B000097C58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B541A1F5944B000097C58 /* AppDelegate.swift */; };
 		353B541D1F5944B000097C58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B541C1F5944B000097C58 /* ViewController.swift */; };
 		353B54201F5944B000097C58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353B541E1F5944B000097C58 /* Main.storyboard */; };
@@ -110,6 +112,8 @@
 		35229AD61FA715EA00FF1866 /* show.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = show.png; path = MyAlamofire/res/show.png; sourceTree = "<group>"; };
 		35229AD71FA715EB00FF1866 /* timg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = timg.png; path = MyAlamofire/res/timg.png; sourceTree = "<group>"; };
 		35229AD81FA715EB00FF1866 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = line.png; path = MyAlamofire/res/line.png; sourceTree = "<group>"; };
+		35229ADE1FA722A500FF1866 /* monitor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = monitor.png; path = MyAlamofire/res/monitor.png; sourceTree = "<group>"; };
+		35229AE01FA722B000FF1866 /* text-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "text-left.png"; path = "MyAlamofire/res/text-left.png"; sourceTree = "<group>"; };
 		353B54171F5944B000097C58 /* CISLSign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CISLSign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		353B541A1F5944B000097C58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		353B541C1F5944B000097C58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +198,8 @@
 		3575F5801F5BE50400671ACE /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				35229AE01FA722B000FF1866 /* text-left.png */,
+				35229ADE1FA722A500FF1866 /* monitor.png */,
 				35229AD41FA715EA00FF1866 /* button.png */,
 				35229AD81FA715EB00FF1866 /* line.png */,
 				35229AD51FA715EA00FF1866 /* pic3.png */,
@@ -352,8 +358,10 @@
 				353B54201F5944B000097C58 /* Main.storyboard in Resources */,
 				35229ADB1FA715EB00FF1866 /* show.png in Resources */,
 				35229ADC1FA715EB00FF1866 /* timg.png in Resources */,
+				35229AE11FA722B000FF1866 /* text-left.png in Resources */,
 				3575F5771F5BD0A100671ACE /* MyAlamofire in Resources */,
 				35229AD91FA715EB00FF1866 /* button.png in Resources */,
+				35229ADF1FA722A600FF1866 /* monitor.png in Resources */,
 				3575F57D1F5BDE7B00671ACE /* pic2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -163,7 +163,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="签入统计" id="IUj-i3-JyL"/>
+                    <tabBarItem key="tabBarItem" title="签入统计" image="text-left.png" id="IUj-i3-JyL"/>
                     <connections>
                         <outlet property="endButton" destination="JSX-rq-ZGS" id="IDu-Rv-v2r"/>
                         <outlet property="startButton" destination="VMW-uS-A7a" id="2LQ-yl-Byj"/>
@@ -240,7 +240,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="在线查询" landscapeImage="unicorn.png" id="slm-EX-EJ2">
+                    <tabBarItem key="tabBarItem" title="在线查询" image="monitor.png" id="slm-EX-EJ2">
                         <inset key="largeContentSizeImageInsets" minX="1" minY="1" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                     <connections>
@@ -271,7 +271,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="monitor.png" width="30" height="30"/>
         <image name="pic2.png" width="490" height="66"/>
-        <image name="unicorn.png" width="200" height="205"/>
+        <image name="text-left.png" width="30" height="30"/>
     </resources>
 </document>
