@@ -15,11 +15,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var passWord: UITextField!//登录密码
     //private let webBL = WebBL.sharedInstance
     //var model: UserModel = UserModel()
-
+    let userDefault = UserDefaults.standard
     override func viewDidLoad() {
+        
+        guard let UserModel = self.get_model() else { super.viewDidLoad(); return }
+        
         super.viewDidLoad()
-       
-        //NotificationCenter.default.addObserver(self, selector: "signIn", name: <#T##NSNotification.Name?#>, object: <#T##Any?#>)
+        userName.text = UserModel.GetID()
+        passWord.text = UserModel.GetPsd()
     }
 
     //退出
@@ -36,6 +39,13 @@ class ViewController: UIViewController {
         Alamofire.request(url, method: .get,parameters: params).responseString {
             response in
             guard let logStr = response.result.value else { return }
+            
+            let model = UserModel(id:self.userName.text!, pswd:self.passWord.text!)
+            //实例对象转换成Data
+            let modelData = NSKeyedArchiver.archivedData(withRootObject: model)
+            //存储Data对象
+            self.userDefault.set(modelData, forKey: "myModel")
+            
             
             //判断在字符串logStr中是否包含"true"字符串
             if(logStr.contains("true")){
@@ -60,6 +70,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func get_model() -> UserModel?{
+   
+        let myModelData =  self.userDefault.data(forKey: "myModel")
+        
+        if(myModelData != nil){
+            let myModel = NSKeyedUnarchiver.unarchiveObject(with: myModelData!) as! UserModel
+            return myModel
+        }else{
+            return nil
+        }
+    }
+
 
 }
-

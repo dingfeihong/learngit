@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PingFang.ttc">
+            <string>PingFangHK-Ultralight</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -21,9 +26,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aYF-rv-gAc">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYF-rv-gAc">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="20"/>
                                 </textAttributes>
@@ -37,30 +41,44 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="feihongding" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iSR-Ji-JgB">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iSR-Ji-JgB">
                                 <rect key="frame" x="0.0" y="115" width="375" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dfh1995a" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TUb-Hh-JYl">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TUb-Hh-JYl">
                                 <rect key="frame" x="0.0" y="144" width="375" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RpL-hH-xO0">
-                                <rect key="frame" x="11" y="193" width="356" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="登陆" image="pic2.png"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RpL-hH-xO0">
+                                <rect key="frame" x="0.0" y="182" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="UFq-1M-BYN"/>
+                                </constraints>
+                                <state key="normal" title="登陆" backgroundImage="signin"/>
                                 <connections>
                                     <action selector="LogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="080-1I-eI4"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="iSR-Ji-JgB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="115" id="3Zb-WH-vyq"/>
+                            <constraint firstItem="iSR-Ji-JgB" firstAttribute="trailing" secondItem="RpL-hH-xO0" secondAttribute="trailing" id="KmT-re-Soo"/>
+                            <constraint firstItem="RpL-hH-xO0" firstAttribute="top" secondItem="iSR-Ji-JgB" secondAttribute="bottom" constant="37" id="Njf-6N-q5G"/>
+                            <constraint firstItem="iSR-Ji-JgB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VGo-F1-hVU"/>
+                            <constraint firstItem="iSR-Ji-JgB" firstAttribute="leading" secondItem="RpL-hH-xO0" secondAttribute="leading" id="VYA-nA-vMC"/>
+                            <constraint firstItem="iSR-Ji-JgB" firstAttribute="trailing" secondItem="aYF-rv-gAc" secondAttribute="trailing" id="Wij-AI-y4h"/>
+                            <constraint firstItem="iSR-Ji-JgB" firstAttribute="trailing" secondItem="TUb-Hh-JYl" secondAttribute="trailing" id="ZaJ-zU-xhC"/>
+                            <constraint firstItem="iSR-Ji-JgB" firstAttribute="leading" secondItem="aYF-rv-gAc" secondAttribute="leading" id="f59-1Q-90U"/>
+                            <constraint firstItem="iSR-Ji-JgB" firstAttribute="leading" secondItem="TUb-Hh-JYl" secondAttribute="leading" id="lw2-jR-vkP"/>
+                            <constraint firstItem="iSR-Ji-JgB" firstAttribute="top" secondItem="aYF-rv-gAc" secondAttribute="bottom" constant="51" id="mEE-YY-TTj"/>
+                            <constraint firstItem="RpL-hH-xO0" firstAttribute="top" secondItem="TUb-Hh-JYl" secondAttribute="bottom" constant="8" symbolic="YES" id="xIz-vj-ge3"/>
+                            <constraint firstItem="iSR-Ji-JgB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="xZT-i2-rkk"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="passWord" destination="TUb-Hh-JYl" id="F9a-Xj-haU"/>
@@ -92,7 +110,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="CISL签入统计" id="DpO-Bl-b5X">
-                                        <barButtonItem key="leftBarButtonItem" title="返回" style="plain" id="MPk-wr-fHw">
+                                        <barButtonItem key="leftBarButtonItem" title="注销" style="plain" id="MPk-wr-fHw">
                                             <connections>
                                                 <action selector="Back:" destination="6fM-Xs-EJZ" id="Oxw-xP-arN"/>
                                             </connections>
@@ -138,8 +156,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMW-uS-A7a">
                                 <rect key="frame" x="26" y="55" width="136" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Ultralight" family="PingFang HK" pointSize="18"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="StartTime:" destination="6fM-Xs-EJZ" eventType="touchUpInside" id="Xz0-oj-ba1"/>
                                 </connections>
@@ -147,8 +167,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSX-rq-ZGS">
                                 <rect key="frame" x="212" y="55" width="136" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Ultralight" family="PingFang HK" pointSize="18"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="StartTime:" destination="6fM-Xs-EJZ" eventType="touchUpInside" id="3R6-G5-VI5"/>
                                 </connections>
@@ -156,14 +178,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="到" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zld-c1-7el">
                                 <rect key="frame" x="179" y="60" width="18" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Ultralight" family="PingFang HK" pointSize="17"/>
+                                <color key="textColor" red="0.012158293741667894" green="0.028288664392825142" blue="0.058533031088082943" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="签入统计" image="text-left.png" id="IUj-i3-JyL"/>
+                    <tabBarItem key="tabBarItem" title="签入统计" image="textleft" selectedImage="textleft" id="IUj-i3-JyL"/>
                     <connections>
                         <outlet property="endButton" destination="JSX-rq-ZGS" id="IDu-Rv-v2r"/>
                         <outlet property="startButton" destination="VMW-uS-A7a" id="2LQ-yl-Byj"/>
@@ -229,7 +251,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="CISL在线查询" id="lNG-4d-XGu">
-                                        <barButtonItem key="leftBarButtonItem" title="返回" style="plain" id="IgV-pj-I4c">
+                                        <barButtonItem key="leftBarButtonItem" title="注销" style="plain" id="IgV-pj-I4c">
                                             <connections>
                                                 <action selector="Back:" destination="Od4-MA-Mav" id="HGU-Zi-h0a"/>
                                             </connections>
@@ -240,7 +262,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="在线查询" image="monitor.png" id="slm-EX-EJ2">
+                    <tabBarItem key="tabBarItem" title="在线查询" image="monitor" id="slm-EX-EJ2">
                         <inset key="largeContentSizeImageInsets" minX="1" minY="1" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                     <connections>
@@ -271,8 +293,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="monitor.png" width="30" height="30"/>
-        <image name="pic2.png" width="490" height="66"/>
-        <image name="text-left.png" width="30" height="30"/>
+        <image name="monitor" width="30" height="30"/>
+        <image name="signin" width="149" height="20"/>
+        <image name="textleft" width="30" height="30"/>
     </resources>
 </document>
