@@ -33,18 +33,19 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "1.png",
+      "filename" : "60pt.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "2.png",
+      "filename" : "60pt-1.png",
       "scale" : "3x"
     },
     {
-      "idiom" : "ios-marketing",
       "size" : "1024x1024",
+      "idiom" : "ios-marketing",
+      "filename" : "fudan.png",
       "scale" : "1x"
     }
   ],
