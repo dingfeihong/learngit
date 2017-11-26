@@ -28,7 +28,9 @@ class QueryViewController: UIViewController,UITableViewDataSource,UITableViewDel
         super.viewDidLoad()
         dateFormatter.dateFormat = "yyyy年MM月dd日"
         startButton.setTitle(dateFormatter.string(from: startOfCurrentMonth()), for: UIControlState.normal)
+        startButton.titleLabel?.adjustsFontSizeToFitWidth = true
         endButton.setTitle(dateFormatter.string(from: endOfCurrentMonth()), for: UIControlState.normal)
+        endButton.titleLabel?.adjustsFontSizeToFitWidth = true
         // Do any additional setup after loading the view.
         Queryonline()
     }

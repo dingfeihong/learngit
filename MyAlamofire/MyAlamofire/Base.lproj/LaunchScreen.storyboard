@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,35 +18,36 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Copyright © 2017 dingfeihong@live.cn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="7Xm-Vq-BnB">
-                                <rect key="frame" x="14" y="626" width="336" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2017 dingfeihong@live.cn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Xm-Vq-BnB">
+                                <rect key="frame" x="15" y="439" width="290.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CISL信息管理系统" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqC-zK-vnV">
-                                <rect key="frame" x="39" y="576" width="161" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CISL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCP-Iw-MT7">
+                                <rect key="frame" x="89" y="48" width="142.5" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CISL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCP-Iw-MT7">
-                                <rect key="frame" x="114" y="133" width="146" height="84"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CISL信息管理系统" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqC-zK-vnV">
+                                <rect key="frame" x="15" y="416" width="160.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="WCP-Iw-MT7" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="98" id="0YX-3v-gfz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WCP-Iw-MT7" secondAttribute="trailing" constant="99" id="U9Z-hV-ucm"/>
-                            <constraint firstItem="WCP-Iw-MT7" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="113" id="riD-vw-gK4"/>
+                            <constraint firstItem="WCP-Iw-MT7" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-150" id="4ch-TI-w9x"/>
+                            <constraint firstItem="OqC-zK-vnV" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="15" id="7va-mb-e0X"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="OqC-zK-vnV" secondAttribute="bottom" constant="40" id="9Om-Pi-a0h"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="7Xm-Vq-BnB" secondAttribute="bottom" constant="20" id="GN5-X7-Kqk"/>
+                            <constraint firstItem="7Xm-Vq-BnB" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="15" id="a4R-2Z-xHW"/>
+                            <constraint firstItem="WCP-Iw-MT7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wey-dx-xYy"/>
                         </constraints>
                     </view>
                 </viewController>

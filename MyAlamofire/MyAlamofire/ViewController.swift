@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         exit(0)
     }
     
+    @IBOutlet weak var errSign: UILabel!
     //登陆
     @IBAction func LogIn(_ sender: Any) {
         
@@ -38,7 +39,7 @@ class ViewController: UIViewController {
         
         Alamofire.request(url, method: .get,parameters: params).responseString {
             response in
-            guard let logStr = response.result.value else { return }
+            guard let logStr = response.result.value else {return}
             
             let model = UserModel(id:self.userName.text!, pswd:self.passWord.text!)
             //实例对象转换成Data
@@ -51,9 +52,12 @@ class ViewController: UIViewController {
             if(logStr.contains("true")){
                 //登录成功
                 print("Login successful")
+                self.errSign.text = " "
                 self.performSegue(withIdentifier:"login", sender: self)
             }
-            
+            else{
+                 self.errSign.text = "登录失败，请检查用户名密码"
+            }
         }
 
     }
